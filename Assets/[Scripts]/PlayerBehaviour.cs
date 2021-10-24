@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
+using TMPro;
 
 public class PlayerBehaviour : MonoBehaviour
 {
@@ -12,6 +14,8 @@ public class PlayerBehaviour : MonoBehaviour
     private float screenBound;
     [SerializeField]
     private GameObject playerBulletSpawn = null;
+    [SerializeField]
+    private TextMeshProUGUI LivesText;
     [Range(0.0f, 5.0f)]
     public float seconds = 0.5f;
     public UnityEvent onPressedOverSeconds = new UnityEvent();
@@ -42,7 +46,14 @@ public class PlayerBehaviour : MonoBehaviour
     void Update()
     {
         GetInput();
-        CheckBounds(); 
+        CheckBounds();
+
+        LivesText.text = lives.ToString();
+
+        if(lives < 1)
+        {
+            SceneManager.LoadScene(2);
+        }
     }
 
     private void GetInput()

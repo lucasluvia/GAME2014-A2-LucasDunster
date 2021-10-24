@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class BullerBehaviour : MonoBehaviour
 {
@@ -9,6 +10,10 @@ public class BullerBehaviour : MonoBehaviour
     public BulletManager bulletManager;
     public int damage;
 
+    private int Score = 0;
+
+    [SerializeField]
+    private TextMeshProUGUI scoreText;
     [SerializeField]
     private BulletType type = BulletType.SHOT;
 
@@ -23,6 +28,11 @@ public class BullerBehaviour : MonoBehaviour
     {
         _Move();
         _CheckBounds();
+        if (Score > 0)
+        {
+            scoreText.text = Score.ToString();
+        }
+
     }
 
     private void _Move()
@@ -34,16 +44,24 @@ public class BullerBehaviour : MonoBehaviour
     {
         if (transform.position.y > verticalBoundary)
         {
-            bulletManager.ReturnBullet(gameObject, type);
+            bulletManager.ReturnBullet(gameObject, type, 0);
         }
     }
 
     public void OnTriggerEnter2D(Collider2D other)
     {
+        if (other.gameObject.layer == 6)
+        {
+            Score += 100;
+        }
+        if (other.gameObject.layer == 7)
+        {
+            Score += 30;
+        }
         if (other.gameObject.tag == "damager")
         {
-            bulletManager.ReturnBullet(gameObject, type);
+            bulletManager.ReturnBullet(gameObject, type, Score);
         }
-
     }
 }
+

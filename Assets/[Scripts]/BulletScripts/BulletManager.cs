@@ -1,12 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class BulletManager : MonoBehaviour
 {
+    [SerializeField]
+    private TextMeshProUGUI scoreText;
+
     public BulletFactory bulletFactory;
     public int MaxShotBullets;
     public int MaxBigShotBullets;
+
+    private int Score;
 
     private Queue<GameObject> m_ShotBulletPool;
     private Queue<GameObject> m_BigShotBulletPool;
@@ -63,7 +69,7 @@ public class BulletManager : MonoBehaviour
         return m_BigShotBulletPool.Count > 0;
     }
 
-    public void ReturnBullet(GameObject returnedBullet, BulletType type)
+    public void ReturnBullet(GameObject returnedBullet, BulletType type, int addScore)
     {
         returnedBullet.SetActive(false);
         switch (type)
@@ -75,6 +81,12 @@ public class BulletManager : MonoBehaviour
                 m_BigShotBulletPool.Enqueue(returnedBullet);
                 break;
         }
-
+        Score += addScore;
     }
+
+    void Update()
+    {
+        scoreText.text = Score.ToString();
+    }
+
 }
