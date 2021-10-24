@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BlockSpawner : MonoBehaviour
+public class Spawner : MonoBehaviour
 {
     [SerializeField]
     private float Speed;
@@ -11,15 +11,19 @@ public class BlockSpawner : MonoBehaviour
     [SerializeField]
     private float Direction;
     [SerializeField]
-    private float SpawnDelay;
+    private float BlockDelay;
+    [SerializeField]
+    private float EnemyDelay;
 
     public BlockManager blockManager;
+    public EnemyManager enemyManager;
 
     void Update()
     {
         Move();
         CheckBounds();
         SpawnBlock();
+        SpawnEnemy();
     }
 
     private void Move()
@@ -42,10 +46,17 @@ public class BlockSpawner : MonoBehaviour
 
     private void SpawnBlock()
     {
-        // delay bullet firing 
-        if (blockManager.HasBlocks() && Time.frameCount % SpawnDelay == 0)
+        if (blockManager.HasBlocks() && Time.frameCount % BlockDelay == 0)
         {
             blockManager.GetBlock(transform.position);
+        }
+    }
+
+    private void SpawnEnemy()
+    {
+        if (enemyManager.HasEnemies() && Time.frameCount % EnemyDelay == 0)
+        {
+            enemyManager.GetEnemy(transform.position);
         }
     }
 }

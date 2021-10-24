@@ -8,6 +8,8 @@ TagManager:
   - Sam
   - shotBullet
   - bigShotBullet
+  - place
+  - detection
   layers:
   - Default
   - TransparentFX
@@ -19,7 +21,7 @@ TagManager:
   - Block
   - Sam
   - Bullet
-  - 
+  - Detection
   - 
   - 
   - 
