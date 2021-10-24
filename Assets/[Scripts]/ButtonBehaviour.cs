@@ -32,9 +32,8 @@ public class ButtonBehaviour : MonoBehaviour
 
     private void MoveCharacter(float direction)
     {
-        Vector2 newVelocity = playerRB.velocity + new Vector2(direction * 2.0f, 0.0f);
+        Vector2 newVelocity = playerRB.velocity + new Vector2(direction * 3.0f, 0.0f);
         playerRB.velocity = Vector2.ClampMagnitude(newVelocity, 6.0f);
-        playerRB.velocity *= 0.99f;
     }
 
 }

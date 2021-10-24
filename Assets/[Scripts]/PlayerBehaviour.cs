@@ -23,7 +23,9 @@ public class PlayerBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        CheckBounds();
+        CheckBounds(); 
+        
+        body.velocity *= 0.99f;
     }
 
     private void CheckBounds()
