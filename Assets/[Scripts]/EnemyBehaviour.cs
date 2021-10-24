@@ -22,8 +22,12 @@ public class EnemyBehaviour : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Entered");
-        Dive();
+        if(other.gameObject.tag == "Sam")
+        {
+            Debug.Log("Entered");
+            Dive();
+        }
+
     }
 
     void OnCollisionEnter2D(Collision2D other)

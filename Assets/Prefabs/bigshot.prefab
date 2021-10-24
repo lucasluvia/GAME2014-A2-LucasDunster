@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1300779286}
   m_Layer: 0
   m_Name: bigshot
-  m_TagString: Untagged
+  m_TagString: bigShotBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - damager
+  - Sam
+  - shotBullet
+  - bigShotBullet
   layers:
   - Default
   - TransparentFX

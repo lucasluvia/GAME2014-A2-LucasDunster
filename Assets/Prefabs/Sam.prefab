@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 225255786}
   m_Layer: 0
   m_Name: Sam
-  m_TagString: Untagged
+  m_TagString: Sam
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -52,7 +52,7 @@ MonoBehaviour:
   isMouse: 0
   screenBound: 1.75
   playerBulletSpawn: {fileID: 2246452103076347953}
-  seconds: 0.3
+  seconds: 0.75
   onPressedOverSeconds:
     m_PersistentCalls:
       m_Calls: []
