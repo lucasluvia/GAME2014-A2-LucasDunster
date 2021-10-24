@@ -35,5 +35,6 @@ public class Timer : MonoBehaviour
         {
             timerText.text = minutes.ToString() + ":" + secondsInt.ToString();
         }
+        PlayerPrefs.SetString("Timer", timerText.text);
     }
 }

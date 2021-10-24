@@ -87,6 +87,8 @@ public class BulletManager : MonoBehaviour
     void Update()
     {
         scoreText.text = Score.ToString();
+
+        PlayerPrefs.SetString("Score", scoreText.text);
     }
 
 }

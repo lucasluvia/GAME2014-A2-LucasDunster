@@ -30,7 +30,7 @@ public class BullerBehaviour : MonoBehaviour
         _CheckBounds();
         if (Score > 0)
         {
-            scoreText.text = Score.ToString();
+            //scoreText.text = Score.ToString();
         }
 
     }
