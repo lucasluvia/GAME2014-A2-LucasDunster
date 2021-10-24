@@ -33,6 +33,11 @@ public class PlayerBehaviour : MonoBehaviour
 
     private bool canBigShoot = false;
 
+    [Header("Audio")]
+    public AudioSource BigShotFired;
+    public AudioSource PlayerHit;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -168,6 +173,7 @@ public class PlayerBehaviour : MonoBehaviour
         {
             lives--;
             anim.SetInteger("Lives", lives);
+            PlayerHit.Play();
         }
 
     }
@@ -191,6 +197,7 @@ public class PlayerBehaviour : MonoBehaviour
 
     private void FireBigShot(BulletType type = BulletType.BIGSHOT)
     {
+        BigShotFired.Play();
         Debug.Log("BIGSHOT");
         if (bulletManager.HasBigShotBullets())
         {

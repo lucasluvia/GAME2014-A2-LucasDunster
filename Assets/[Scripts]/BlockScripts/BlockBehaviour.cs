@@ -13,6 +13,9 @@ public class BlockBehaviour : MonoBehaviour
     public BlockManager blockManager;
     private Animator animator;
 
+    [Header("Audio")]
+    public AudioSource BlockHit;
+
     void Start()
     {
         blockManager = FindObjectOfType<BlockManager>();
@@ -45,6 +48,7 @@ public class BlockBehaviour : MonoBehaviour
     {
         if (other.gameObject.tag == "Sam")
         {
+            BlockHit.Play();
             state = 3;
         }
     }
@@ -53,10 +57,12 @@ public class BlockBehaviour : MonoBehaviour
     {
         if (other.gameObject.tag == "shotBullet")
         {
+            BlockHit.Play();
             state++;
         }
         if (other.gameObject.tag == "bigShotBullet")
         {
+            BlockHit.Play();
             state = 3;
         }
     }

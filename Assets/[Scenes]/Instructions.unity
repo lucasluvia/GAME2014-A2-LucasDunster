@@ -789,6 +789,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonDestination: 0
   playerBulletSpawn: {fileID: 0}
+  ShotFired: {fileID: 0}
   bulletManager: {fileID: 0}
 --- !u!1 &554557150
 GameObject:
@@ -886,7 +887,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: ec788b9f19b4c5442bd6057b7096b828, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1469,6 +1470,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7143750748101993471, guid: 643d6255a6eb0b848a8a5f28e5d77f65, type: 3}
+      propertyPath: state
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7143750748101993471, guid: 643d6255a6eb0b848a8a5f28e5d77f65, type: 3}
       propertyPath: isExample
       value: 1
       objectReference: {fileID: 0}
@@ -1720,6 +1725,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3317646381026600601, guid: 643d6255a6eb0b848a8a5f28e5d77f65, type: 3}
+      propertyPath: state
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7143750748101993471, guid: 643d6255a6eb0b848a8a5f28e5d77f65, type: 3}
       propertyPath: state
       value: 2
       objectReference: {fileID: 0}

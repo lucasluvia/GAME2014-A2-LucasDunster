@@ -10,6 +10,9 @@ public class ButtonBehaviour : MonoBehaviour
     [SerializeField]
     private GameObject playerBulletSpawn = null;
 
+    [Header("Audio")]
+    public AudioSource ShotFired;
+
     public BulletManager bulletManager;
 
     public void OnButtonPressed()
@@ -23,6 +26,7 @@ public class ButtonBehaviour : MonoBehaviour
         Debug.Log("Fire Shot");
         if(bulletManager.HasShotBullets())
         {
+            ShotFired.Play();
             bulletManager.GetBullet(playerBulletSpawn.transform.position);
         }
 

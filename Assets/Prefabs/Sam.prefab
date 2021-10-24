@@ -52,12 +52,15 @@ MonoBehaviour:
   isMouse: 0
   screenBound: 1.75
   playerBulletSpawn: {fileID: 2246452103076347953}
+  LivesText: {fileID: 0}
   seconds: 0.75
   onPressedOverSeconds:
     m_PersistentCalls:
       m_Calls: []
   bulletManager: {fileID: 0}
   lives: 3
+  BigShotFired: {fileID: 0}
+  PlayerHit: {fileID: 0}
 --- !u!212 &232485823983108434
 SpriteRenderer:
   m_ObjectHideFlags: 0

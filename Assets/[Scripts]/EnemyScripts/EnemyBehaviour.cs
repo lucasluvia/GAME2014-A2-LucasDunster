@@ -14,6 +14,9 @@ public class EnemyBehaviour : MonoBehaviour
     [SerializeField]
     private float Speed = 0.0f;
 
+    [Header("Audio")]
+    public AudioSource EnemyHit;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,6 +38,7 @@ public class EnemyBehaviour : MonoBehaviour
     {
         if (other.gameObject.tag == "shotBullet" || other.gameObject.tag == "bigShotBullet")
         {
+            EnemyHit.Play();
             anim.SetBool("EnemyDied", true);
             StartCoroutine(Return(0.2f));
         }
@@ -56,6 +60,7 @@ public class EnemyBehaviour : MonoBehaviour
     {
         if (other.gameObject.tag == "Sam")
         {
+            EnemyHit.Play();
             anim.SetBool("EnemyDied", true);
             StartCoroutine(Return(0.2f));
         }
