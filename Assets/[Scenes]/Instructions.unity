@@ -1808,10 +1808,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3317646381026600601, guid: 643d6255a6eb0b848a8a5f28e5d77f65, type: 3}
-      propertyPath: state
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 9024577921743113572, guid: 643d6255a6eb0b848a8a5f28e5d77f65, type: 3}
       propertyPath: m_Name
       value: IdleBlock

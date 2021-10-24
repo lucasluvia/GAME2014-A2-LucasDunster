@@ -6,6 +6,8 @@ public class BlockBehaviour : MonoBehaviour
 {
     [SerializeField]
     private int state;
+    [SerializeField]
+    private bool isExample = false;
 
     private Animator animator;
 
@@ -17,6 +19,11 @@ public class BlockBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(!isExample)
+        {
+
+        }
+
         if(state > 2)
         {
             //destroy
