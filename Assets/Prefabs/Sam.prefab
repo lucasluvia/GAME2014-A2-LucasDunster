@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 566545402}
   - component: {fileID: 5933956793296497896}
   - component: {fileID: 225255786}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sam
   m_TagString: Sam
   m_Icon: {fileID: 0}
@@ -57,6 +57,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   bulletManager: {fileID: 0}
+  lives: 3
 --- !u!212 &232485823983108434
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -221,7 +222,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6676250547333016721}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BulletSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}

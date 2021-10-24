@@ -17,24 +17,6 @@
         {
             "deviceId": "emulator-5554",
             "name": "com.LLuvia.MobileA2",
-            "processId": 4501,
-            "exited": true
-        },
-        {
-            "deviceId": "emulator-5554",
-            "name": "com.LLuvia.MobileA2",
-            "processId": 5156,
-            "exited": true
-        },
-        {
-            "deviceId": "emulator-5554",
-            "name": "com.LLuvia.MobileA2",
-            "processId": 5357,
-            "exited": true
-        },
-        {
-            "deviceId": "emulator-5554",
-            "name": "com.LLuvia.MobileA2",
             "processId": 5535,
             "exited": true
         },
@@ -42,6 +24,24 @@
             "deviceId": "emulator-5554",
             "name": "com.LLuvia.MobileA2",
             "processId": 6181,
+            "exited": true
+        },
+        {
+            "deviceId": "emulator-5554",
+            "name": "com.LLuvia.MobileA2",
+            "processId": 7483,
+            "exited": true
+        },
+        {
+            "deviceId": "emulator-5554",
+            "name": "com.LLuvia.MobileA2",
+            "processId": 7679,
+            "exited": true
+        },
+        {
+            "deviceId": "emulator-5554",
+            "name": "com.LLuvia.MobileA2",
+            "processId": 7839,
             "exited": true
         }
     ],

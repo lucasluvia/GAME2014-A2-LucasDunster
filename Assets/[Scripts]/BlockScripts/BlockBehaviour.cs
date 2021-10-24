@@ -41,6 +41,13 @@ public class BlockBehaviour : MonoBehaviour
         transform.position += new Vector3(0.0f, Speed, 0.0f) * Time.deltaTime;
     }
 
+    public void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "Sam")
+        {
+            state = 3;
+        }
+    }
 
     public void OnTriggerEnter2D(Collider2D other)
     {
@@ -48,7 +55,7 @@ public class BlockBehaviour : MonoBehaviour
         {
             state++;
         }
-        if (other.gameObject.tag == "Sam" || other.gameObject.tag == "bigShotBullet")
+        if (other.gameObject.tag == "bigShotBullet")
         {
             state = 3;
         }

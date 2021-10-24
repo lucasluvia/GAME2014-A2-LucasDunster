@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7051812345636840514}
   - component: {fileID: 2196818114506876389}
   - component: {fileID: 5601921410701570972}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy
   m_TagString: damager
   m_Icon: {fileID: 0}
@@ -74,8 +74,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -146125173
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -1904123321853639208, guid: 1580dd4c803ac5e4c8a871ccbd1c0aa4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

@@ -22,6 +22,7 @@ public class PlayerBehaviour : MonoBehaviour
     private Rigidbody2D body;
     private Animator anim;
 
+    [SerializeField]
     private int lives = 3;
     private Vector3 m_touchesEnded;
     private float time = 0.0f;

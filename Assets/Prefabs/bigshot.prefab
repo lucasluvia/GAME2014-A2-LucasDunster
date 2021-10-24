@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4819140281956179341}
   - component: {fileID: 4819140281956179340}
   - component: {fileID: 1300779286}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: bigshot
   m_TagString: bigShotBullet
   m_Icon: {fileID: 0}
