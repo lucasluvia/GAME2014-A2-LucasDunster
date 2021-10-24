@@ -25,6 +25,11 @@ public class ButtonBehaviour : MonoBehaviour
         MoveCharacter(1.0f);
     }
 
+    public void Fire()
+    {
+        //Spawn bullet
+    }
+
     private void MoveCharacter(float direction)
     {
         Vector2 newVelocity = playerRB.velocity + new Vector2(direction * 2.0f, 0.0f);
