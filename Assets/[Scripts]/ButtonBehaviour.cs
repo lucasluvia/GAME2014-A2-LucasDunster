@@ -8,32 +8,23 @@ public class ButtonBehaviour : MonoBehaviour
     [SerializeField]
     private int buttonDestination = 0;
     [SerializeField]
-    private Rigidbody2D playerRB = null;
+    private GameObject playerBulletSpawn = null;
 
+    public BulletManager bulletManager;
 
     public void OnButtonPressed()
     {
         SceneManager.LoadScene(buttonDestination);
-    }
-    public void OnLeftPressed()
-    {
-        MoveCharacter(-1.0f);
+        
     }
 
-    public void OnRightPressed()
+    public void OnFire()
     {
-        MoveCharacter(1.0f);
-    }
+        Debug.Log("Fire Shot");
+        if(bulletManager.HasShotBullets())
+        {
+            bulletManager.GetBullet(playerBulletSpawn.transform.position);
+        }
 
-    public void Fire()
-    {
-        //Spawn bullet
     }
-
-    private void MoveCharacter(float direction)
-    {
-        Vector2 newVelocity = playerRB.velocity + new Vector2(direction * 3.0f, 0.0f);
-        playerRB.velocity = Vector2.ClampMagnitude(newVelocity, 6.0f);
-    }
-
 }

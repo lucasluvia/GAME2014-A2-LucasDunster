@@ -10,9 +10,39 @@
     "m_KnownPackagesForSerialization": [
         {
             "deviceId": "emulator-5554",
-            "name": "com.LLuvia.MobileA2",
-            "processId": 3105,
+            "name": "com.ldmnq.launcher3",
+            "processId": 1942,
             "exited": false
+        },
+        {
+            "deviceId": "emulator-5554",
+            "name": "com.LLuvia.MobileA2",
+            "processId": 4319,
+            "exited": true
+        },
+        {
+            "deviceId": "emulator-5554",
+            "name": "com.LLuvia.MobileA2",
+            "processId": 4501,
+            "exited": true
+        },
+        {
+            "deviceId": "emulator-5554",
+            "name": "com.LLuvia.MobileA2",
+            "processId": 5156,
+            "exited": true
+        },
+        {
+            "deviceId": "emulator-5554",
+            "name": "com.LLuvia.MobileA2",
+            "processId": 5357,
+            "exited": true
+        },
+        {
+            "deviceId": "emulator-5554",
+            "name": "com.LLuvia.MobileA2",
+            "processId": 5535,
+            "exited": true
         }
     ],
     "m_Tags": {
